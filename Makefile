@@ -1,9 +1,3 @@
-###############################################################################
-# Uncomment for debugging
-# DEBUG := 1
-# Pretty build
-# Q ?= @
-
 CXX := g++
 
 # PYTHON Header path
@@ -40,15 +34,12 @@ LIBRARIES += stdc++ cudart c10 caffe2 torch torch_python caffe2_gpu
 # Debugging
 ifeq ($(DEBUG), 1)
 	COMMON_FLAGS += -DDEBUG -g -O0
-	# https://gcoe-dresden.de/reaching-the-shore-with-a-fog-warning-my-eurohack-day-4-morning-session/
 	NVCCFLAGS += -g -G # -rdc true
 else
 	COMMON_FLAGS += -DNDEBUG -O3
 endif
 
 WARNINGS := -Wall -Wno-sign-compare -Wcomment
-
-INCLUDE_DIRS += $(BLAS_INCLUDE)
 
 # Automatic dependency generation (nvcc is handled separately)
 CXXFLAGS += -MMD -MP

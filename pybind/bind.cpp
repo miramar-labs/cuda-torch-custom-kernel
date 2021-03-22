@@ -23,7 +23,7 @@ void AddGPU(at::Tensor in_a, at::Tensor in_b, at::Tensor out_c) {
           out_c.data_ptr<T>(), N, at::cuda::getCurrentCUDAStream());
 }
 
-// instansiate the CPP template for T=float:
+// instantiate the CPP template for T=float:
 template void AddGPU<float>(at::Tensor in_a, at::Tensor in_b, at::Tensor out_c);
 
 // declare the extension module with the AddGPU function:

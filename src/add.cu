@@ -8,9 +8,7 @@ constexpr int MAXIMUM_NUM_BLOCKS = 4096;
 
 inline int GET_BLOCKS(const int N) {
   return std::max(std::min((N + CUDA_NUM_THREADS - 1) / CUDA_NUM_THREADS,
-           MAXIMUM_NUM_BLOCKS),
-           // Use at least 1 block, since CUDA does not allow empty block
-           1);
+           MAXIMUM_NUM_BLOCKS), 1);
 }
 
 // define the kernel function:
@@ -33,5 +31,5 @@ void AddGPUKernel(T *in_a, T *in_b, T *out_c, int N, cudaStream_t stream) {
     throw std::runtime_error("CUDA kernel failed : " + std::to_string(err));
 }
 
-// instansiate the kernel template for T=float:
+// instantiate the kernel template for T=float:
 template void AddGPUKernel<float>(float *in_a, float *in_b, float *out_c, int N, cudaStream_t stream);
