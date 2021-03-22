@@ -1,0 +1,2 @@
+*.cu linguist-detectable=true
+*.cu linguist-language=CUDA
