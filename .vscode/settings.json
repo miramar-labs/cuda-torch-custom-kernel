@@ -1,0 +1,50 @@
+{
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "python.languageServer": "Pylance",
+    "jupyter.alwaysTrustNotebooks": true,
+    "git.autofetch": true,
+    "vs-kubernetes": {
+        "vs-kubernetes.draft-path.linux": "/home/aaron/.vs-kubernetes/tools/draft/linux-amd64/draft",
+        "vs-kubernetes.helm-path.linux": "/home/aaron/.vs-kubernetes/tools/helm/linux-amd64/helm",
+        "vs-kubernetes.kubectl-path.linux": "/home/aaron/.vs-kubernetes/tools/kubectl/kubectl",
+        "vs-kubernetes.minikube-path.linux": "/home/aaron/.vs-kubernetes/tools/minikube/linux-amd64/minikube"
+    },
+    "files.autoSave": "afterDelay",
+    "[python]": {
+    
+        "editor.wordBasedSuggestions": false
+    },
+    "git.enableSmartCommit": true,
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
+    "files.watcherExclude": {
+        "**/.bloop": true,
+        "**/.metals": true,
+        "**/.ammonite": true
+    },
+    "redhat.telemetry.enabled": false,
+    "code-runner.runInTerminal": true,
+    "files.associations": {
+        "*.cu":"cpp",
+        "*.cuh":"cpp"
+    },
+    "ShortcutMenuBar.findReplace": true,
+    "ShortcutMenuBar.startDebugging": true,
+    "ShortcutMenuBar.userButton01Command": "workbench.action.tasks.runTask|C/C++: g++ BUILD active file",
+    "ShortcutMenuBar.userButton02Command": "workbench.action.tasks.runTask|C/C++: g++ RUN active file",
+    "ShortcutMenuBar.toggleTerminal": false,
+    "ShortcutMenuBar.navigateForward": false,
+    "ShortcutMenuBar.navigateBack": false,
+    "python.pythonPath": "/home/aaron/cuda-torch-custom-kernel/venv3.8.0/bin/python3.8"
+}

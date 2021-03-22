@@ -1,0 +1,40 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "CUDA C/C++: BUILD active file",
+            "command": "nvcc",
+            "args": [
+                "-g",
+                "-G",
+                "-ccbin",
+                "g++",
+                "-m64",
+                "-gencode",
+                "arch=compute_75,code=sm_75",
+                "${file}",
+                "-I${workspaceFolder}/Common",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": ["$gcc"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "CUDA C/C++: RUN active file",
+            "type": "shell",
+            "command": "${fileDirname}/${fileBasenameNoExtension}",
+            "dependsOn": [
+                "CUDA C/C++: BUILD active file"
+            ],
+            "problemMatcher": ["$gcc"]
+        }
+    ]
+}
