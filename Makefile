@@ -60,7 +60,6 @@ CXXFLAGS += -pthread -fPIC -fwrapv -std=c++14 $(COMMON_FLAGS) $(WARNINGS)
 NVCCFLAGS += -std=c++14 -ccbin=$(CXX) -Xcompiler -fPIC $(COMMON_FLAGS)
 
 all: $(STATIC_LIB)
-	#python setup.py install --force
 
 debug:
 	@ echo $(INCLUDE_DIRS)
