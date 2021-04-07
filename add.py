@@ -3,8 +3,8 @@ import torch
 from CustomPyTorchCUDAKernelBackend import AddGPU
 
 def add_gpu(a, b):
-    assert isinstance(a, torch.cuda.FloatTensor) \
-        and isinstance(b, torch.cuda.FloatTensor)
+    assert isinstance(a, torch.cuda.FloatTensor) 
+    assert isinstance(b, torch.cuda.FloatTensor)
     assert a.numel() == b.numel()
 
     c = a.new()

@@ -12,6 +12,10 @@ To Build:
 
 - Create a Python virtualenv based on Python 3.8 and activate it.
 
+        pushd cuda-torch-custom-kernel
+        bash ../pyvenv.sh 3.8.0 .
+        source ./venv3.8.0/bin/activate
+
 - Install requirements:
 
         pip3 install -r requirements.txt
